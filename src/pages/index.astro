@@ -1,0 +1,216 @@
+---
+// Component Imports
+import Tour from '../components/Tour.astro';
+// You can import components from any supported Framework here!
+
+
+// Component Script:
+// You can write any JavaScript/TypeScript that you'd like here.
+// It will run during the build, but never in the browser.
+// All variables are available to use in the HTML template below.
+let title = 'My Astro Site';
+
+// Full Astro Component Syntax:
+// https://docs.astro.build/core-concepts/astro-components/
+---
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>{title}</title>
+
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+          <script src="https://cdn.tailwindcss.com"></script>
+      <link rel="stylesheet" href={Astro.resolve("../styles/global.css")} >
+      <script src="https://kit.fontawesome.com/2d61aef8e6.js" crossorigin="anonymous"></script>
+      
+   
+
+</head>
+<body class="bg-blue">
+    <main >
+        <header class="bg-red text-white   m-auto flex px-10 py-2  justify-between" >
+
+        <h1>  logo</h1>
+        <ul class="flex space-x-10">
+        <li>Accueil</li>
+        <li> Les prochaines formations</li>
+        <li> Toutes nos formations </li>
+         </ul>
+        </header>
+
+        <article class=" w-10/12  flex md:grid grid-cols-2 m-auto space-x-20 h-screen py-2">
+<figure class="h-full">
+
+<img class="h-full" src="../assets/audit.svg">
+</figure>
+
+<section class="p-10 text-white  h-min self-center place-self-center bg-blue"> 
+<h1 class=" mb-10 text-6xl text-yellow-400 font-black "> Soigne ta comm</h1>
+<p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. .</p>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. .</p>
+
+</section>
+
+</article>
+<h2 class="text-center text-white pt-10 text-5xl font-black"> Nos prochaines formations</h2>
+
+<article class="bg-red w-12/12 m-auto  ">
+<div  class="md:grid grid-cols-3  w-10/12 h-screen  m-auto space-x-20 content-center items-center place-content-center ">
+<div>
+<figure class="">
+<img class="w-full" src="../assets/pipou.png">
+</figure>
+<div class="flex flex-col">
+<button class="bg-blue  m-auto text-white hover:text-yellow-400 p-5 text-3xl font-black w-full mt-5">En savoir plus</button>
+<button class="bg-blue  m-auto text-white hover:text-yellow-400 p-5 text-3xl w-full font-black  mt-5">S'inscrire</button>
+</div>
+</div>
+<section class="col-span-2 self-end  "> 
+<h1 class="text-yellow-400  text-5xl font-black"> 2 jours pour créer ton site</h1>
+<h2 class="text-white  mb-10 text-xl font-black"> 
+Tu souhaites créer ton propre site mais tu ne sais pas par où commencer ?
+</h2>
+<div class="bg-white p-10  drop-shadow">
+<div class="flex space-x-10">
+<ul class="flex space-x-4 items-baseline mb-2">
+<li>
+<i class="fas fa-calendar-alt color-blue text-2xl "></i></li>
+<li>
+<p class=" text-lg  "> le 28 janvier 2022</p></li>
+</ul>
+<ul class="flex space-x-4 items-baseline">
+<li>
+<i class="fas fa-user-alt color-blue text-2xl"></i></li>
+<li>
+<p class=" text-lg  "> Jérémy Scala</p></li>
+</ul>
+</div>
+<ul class="flex space-x-4 items-baseline mb-5">
+<li>
+<i class="fas fa-map-marker color-blue text-2xl"></i></li>
+<li>
+<p class=" text-lg  "> La grand poste - Quai Sur - Meuse 19, 4000 Liège</p></li>
+</ul>
+
+<p class="mb-5">Le Sirius Hub te propose un atelier gratuit de deux jours grâce auquel tu créeras le premier jet de ton propre site web !
+
+Ensemble, nous nous procurerons un hébergeur ainsi qu’un nom de domaine.
+
+Ensuite, on y placera l’outil WordPress et on appréhendera son fonctionnement.
+
+Après cette journée, tu seras capable de continuer par toi-même le développement de ton propre site internet, que ce soit un site vitrine ou un e-commerce.</p>
+<span class="color-blue font-black">Prérequis :</span>
+<ul class="mb-2">
+<li>- Savoir naviguer sur internet avec aisance</li>
+<li>- Savoir manipuler un ordinateur
+</li>
+</ul>
+
+
+
+<span class="color-blue font-black">Optionnel :</span>
+<ul>
+<li>
+ - Avoir son ordinateur</li>
+ </ul>
+ 
+</div>
+</section>
+</div>
+</article>
+
+
+<article class="bg-blue w-12/12 m-auto  ">
+<div  class="md:grid grid-cols-3  w-10/12 h-screen  m-auto space-x-20 content-center items-center place-content-center ">
+
+<section class="col-span-2 self-end "> 
+<h1 class="text-yellow-400  text-5xl font-black">  3 jours pour se digitaliser</h1>
+<h2 class="text-white  mb-10 text-xl font-black"> 
+Tu souhaites créer ton propre site mais tu ne sais pas par où commencer ?
+</h2>
+<div class="bg-white p-10  drop-shadow">
+<div class="flex space-x-10">
+<ul class="flex space-x-4 items-baseline mb-2">
+<li>
+<i class="fas fa-calendar-alt color-red text-2xl "></i></li>
+<li>
+<p class=" text-lg  "> le 28 janvier 2022</p></li>
+</ul>
+<ul class="flex space-x-4 items-baseline">
+<li>
+<i class="fas fa-user-alt color-red text-2xl"></i></li>
+<li>
+<p class=" text-lg  "> Jérémy Scala</p></li>
+</ul>
+</div>
+<ul class="flex space-x-4 items-baseline mb-5">
+<li>
+<i class="fas fa-map-marker color-red text-2xl"></i></li>
+<li>
+<p class=" text-lg  "> La grand poste - Quai Sur - Meuse 19, 4000 Liège</p></li>
+</ul>
+
+<p class="mb-5">Le Sirius Hub te propose un atelier gratuit de deux jours grâce auquel tu créeras le premier jet de ton propre site web !
+
+Ensemble, nous nous procurerons un hébergeur ainsi qu’un nom de domaine.
+
+Ensuite, on y placera l’outil WordPress et on appréhendera son fonctionnement.
+
+Après cette journée, tu seras capable de continuer par toi-même le développement de ton propre site internet, que ce soit un site vitrine ou un e-commerce.</p>
+<span class="color-red font-black">Prérequis :</span>
+<ul class="mb-2">
+<li>- Savoir naviguer sur internet avec aisance</li>
+<li>- Savoir manipuler un ordinateur
+</li>
+</ul>
+
+
+
+<span class="color-red font-black">Optionnel :</span>
+<ul>
+<li>
+ - Avoir son ordinateur</li>
+ </ul>
+ <div class="flex space-x-4">
+</div></div>
+</section>
+<div>
+<figure class="">
+
+<img class="w-full" src="../assets/chriss.png">
+</figure>
+<div class="flex flex-col ">
+<button class="bg-red  m-auto text-white hover:text-yellow-400 p-5 text-3xl font-black w-full  mt-5">En savoir plus</button>
+<button class="bg-red  m-auto text-white hover:text-yellow-400 p-5 text-3xl w-full font-black  mt-5">S'inscrire</button>
+</div>      
+</div>
+</div>
+</article>
+
+      <footer class="flex w-10/12 m-auto p-2 opacity-8 justify-between "> 
+      <ul class="flex space-x-4 text-white " >
+      <li> <i class="fab fa-facebook text-white text-xl"></i></li>
+      <li> <i class="fab fa-instagram text-white text-xl"></i></li>
+      </ul>
+      <p class="text-white">@Sirius coop</p>
+      <div>
+      <h3 class="text-white"> Newsletter  </h3>
+      </div>
+      </footer>  
+
+        <!--
+           - You can also use imported framework components directly in your markup!
+           -
+           - Note: by default, these components are NOT interactive on the client.
+           - The `:visible` directive tells Astro to make it interactive.
+           -
+           - See https://docs.astro.build/core-concepts/component-hydration/ 
+           -->
+
+    </main>
+</body>
+</html>
