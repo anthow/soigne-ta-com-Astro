@@ -2,22 +2,46 @@
 @tailwind components;
 @tailwind utilities;
 
+
+html,body,main{
+    width: 100%;
+}
+
 .color-red{
-    color: #9b3f4a;
+    color: #9b3f4a !important
+    ;
 }
 
 .bg-red{
-    background-color: #9b3f4a;
+    background-color: #9b3f4a !important;
 }
 
 
 .color-blue{
-    color: #1e5182;
+    color: #1e5182 !important;
 }
 
 .bg-blue{
-    background-color: #1e5182;
+    background-color: #1e5182 !important;
 }
 
 
 
+@media only screen and (max-width: 600px) {
+    .color-red{
+    color: white !important
+    ;
+}
+
+.color-blue{
+    color: white !important;
+}
+  }
+
+
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Bakbak One', cursive;}
+
+p{
+    font-family: 'RobotoRegular'; 
+}

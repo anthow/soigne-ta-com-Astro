@@ -18,8 +18,13 @@ let title = 'My Astro Site';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>{title}</title>
-
+     <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/robotech-gp" type="text/css"/> 
+      <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/roboto-1" type="text/css"/> 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap" rel="stylesheet"> 
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+              <link rel="stylesheet" href={Astro.resolve("../styles/reset.css")} >
           <script src="https://cdn.tailwindcss.com"></script>
       <link rel="stylesheet" href={Astro.resolve("../styles/global.css")} >
       <script src="https://kit.fontawesome.com/2d61aef8e6.js" crossorigin="anonymous"></script>
@@ -27,26 +32,26 @@ let title = 'My Astro Site';
    
 
 </head>
-<body class="bg-blue">
-    <main >
-        <header class="bg-red text-white   m-auto flex px-10 py-2  justify-between" >
+<body class="bg-blue ">
+    <main class="w-screen " >
+        <header class="bg-red text-white  m-auto flex px-10 py-2  justify-between" >
 
         <h1>  logo</h1>
-        <ul class="flex space-x-10">
+        <ul class="flex flex-col md:flex-row space-x-10">
         <li>Accueil</li>
         <li> Les prochaines formations</li>
         <li> Toutes nos formations </li>
          </ul>
         </header>
 
-        <article class=" w-10/12  flex md:grid grid-cols-2 m-auto space-x-20 h-screen py-2">
-<figure class="h-full">
+        <article class="mt-10 md:mt-0 w-10/12 flex flex-col md:grid md:grid-cols-2 m-auto md:space-x-20 md:h-screen md:py-2">
+<figure class="md:h-full ">
 
-<img class="h-full" src="../assets/audit.svg">
+<img class="md:h-full m-auto" src="../assets/audit.svg">
 </figure>
 
-<section class="p-10 text-white  h-min self-center place-self-center bg-blue"> 
-<h1 class=" mb-10 text-6xl text-yellow-400 font-black "> Soigne ta comm</h1>
+<section class="md:p-10 text-white m-auto  md:h-min md:self-center md:place-self-center bg-blue"> 
+<h1 class=" mb-10 text-4xl md:text-6xl text-yellow-400 font-black "> Soigne ta comm</h1>
 <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. .</p>
 
@@ -56,42 +61,44 @@ Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam. .</p>
 </section>
 
 </article>
-<h2 class="text-center text-white pt-10 text-5xl font-black"> Nos prochaines formations</h2>
+<h2 class="text-center text-white pt-10 text-4xl mb-10 md:mb-0 md:text-5xl font-black"> Nos prochaines formations</h2>
 
-<article class="bg-red w-12/12 m-auto  ">
-<div  class="md:grid grid-cols-3  w-10/12 h-screen  m-auto space-x-20 content-center items-center place-content-center ">
+<article class="bg-red w-12/12 text-white md:text-black m-auto pb-10 md:pb-0  ">
+<div  class="md:grid grid-cols-3  w-10/12 md:h-screen  m-auto md:space-x-20 content-center items-center place-content-center ">
 <div>
 <figure class="">
 <img class="w-full" src="../assets/pipou.png">
 </figure>
-<div class="flex flex-col">
+<div class="flex flex-col hidden md:block">
 <button class="bg-blue  m-auto text-white hover:text-yellow-400 p-5 text-3xl font-black w-full mt-5">En savoir plus</button>
 <button class="bg-blue  m-auto text-white hover:text-yellow-400 p-5 text-3xl w-full font-black  mt-5">S'inscrire</button>
 </div>
 </div>
-<section class="col-span-2 self-end  "> 
-<h1 class="text-yellow-400  text-5xl font-black"> 2 jours pour créer ton site</h1>
-<h2 class="text-white  mb-10 text-xl font-black"> 
+<section class="md:col-span-2 md:self-end w-12/12  "> 
+<h1 class="text-yellow-400 text-4xl my-5 md:my-0  md:text-5xl font-black"> 2 jours pour créer ton site</h1>
+<h2 class="text-white mb-5 md:mb-10 text-xl font-black"> 
 Tu souhaites créer ton propre site mais tu ne sais pas par où commencer ?
 </h2>
-<div class="bg-white p-10  drop-shadow">
-<div class="flex space-x-10">
+<button class="bg-blue  m-auto md:hidden text-white hover:text-yellow-400 p-2 text-sm w-full font-black ">S'inscrire</button>
+
+<div class="md:bg-white p-2 md:p-10  drop-shadow">
+<div class="flex flex-col md:flex-row md:space-x-10">
 <ul class="flex space-x-4 items-baseline mb-2">
 <li>
-<i class="fas fa-calendar-alt color-blue text-2xl "></i></li>
+<i class="fas fa-calendar-alt  color-blue text-2xl "></i></li>
 <li>
 <p class=" text-lg  "> le 28 janvier 2022</p></li>
 </ul>
 <ul class="flex space-x-4 items-baseline">
 <li>
-<i class="fas fa-user-alt color-blue text-2xl"></i></li>
+<i class="fas fa-user-alt color-blue mb-5 md:mb-0  md:color-blue text-2xl"></i></li>
 <li>
 <p class=" text-lg  "> Jérémy Scala</p></li>
 </ul>
 </div>
 <ul class="flex space-x-4 items-baseline mb-5">
 <li>
-<i class="fas fa-map-marker color-blue text-2xl"></i></li>
+<i class="fas fa-map-marker color-blue text-white md:color-blue text-2xl"></i></li>
 <li>
 <p class=" text-lg  "> La grand poste - Quai Sur - Meuse 19, 4000 Liège</p></li>
 </ul>
@@ -103,7 +110,7 @@ Ensemble, nous nous procurerons un hébergeur ainsi qu’un nom de domaine.
 Ensuite, on y placera l’outil WordPress et on appréhendera son fonctionnement.
 
 Après cette journée, tu seras capable de continuer par toi-même le développement de ton propre site internet, que ce soit un site vitrine ou un e-commerce.</p>
-<span class="color-blue font-black">Prérequis :</span>
+<span class="color-blue font-black text-white md:color-blue">Prérequis :</span>
 <ul class="mb-2">
 <li>- Savoir naviguer sur internet avec aisance</li>
 <li>- Savoir manipuler un ordinateur
@@ -112,28 +119,34 @@ Après cette journée, tu seras capable de continuer par toi-même le développe
 
 
 
-<span class="color-blue font-black">Optionnel :</span>
+<span class="color-blue font-black text-white md:color-blue">Optionnel :</span>
 <ul>
 <li>
  - Avoir son ordinateur</li>
  </ul>
  
 </div>
+<div class="flex md:hidden flex-col">
+<button class="bg-blue  m-auto text-white hover:text-yellow-400 md:p-5 p-2 text-sm md:text-3xl font-black w-full mt-5">En savoir plus</button>
+<button class="bg-blue  m-auto text-white hover:text-yellow-400 md:p-5 p-2 text-sm md:text-3xl w-full font-black  mt-5">S'inscrire</button>
+</div>
 </section>
 </div>
 </article>
 
 
-<article class="bg-blue w-12/12 m-auto  ">
-<div  class="md:grid grid-cols-3  w-10/12 h-screen  m-auto space-x-20 content-center items-center place-content-center ">
+<article class="bg-blue w-12/12 m-auto mt-10  ">
+<div  class="md:grid grid-cols-3 flex flex-col text-white md:text-black  w-10/12 md:h-screen  m-auto md:space-x-20 content-center items-center place-content-center ">
 
-<section class="col-span-2 self-end "> 
-<h1 class="text-yellow-400  text-5xl font-black">  3 jours pour se digitaliser</h1>
-<h2 class="text-white  mb-10 text-xl font-black"> 
+<section class="md:col-span-2 md:self-end order-2 md:order-1  "> 
+<h1 class="text-yellow-400 text-3xl md:text-5xl my-5 md:my-0 font-black">  3 jours pour se digitaliser</h1>
+<h2 class="text-white  mb-5 md:mb-10 text-xl font-black"> 
 Tu souhaites créer ton propre site mais tu ne sais pas par où commencer ?
 </h2>
-<div class="bg-white p-10  drop-shadow">
-<div class="flex space-x-10">
+<button class="bg-red  m-auto md:hidden text-white hover:text-yellow-400 p-2 text-sm w-full font-black ">S'inscrire</button>
+
+<div class="md:bg-white p-2 md:p-10  drop-shadow">
+<div class="flex md:space-x-10 flex-col md:flex-row">
 <ul class="flex space-x-4 items-baseline mb-2">
 <li>
 <i class="fas fa-calendar-alt color-red text-2xl "></i></li>
@@ -142,7 +155,7 @@ Tu souhaites créer ton propre site mais tu ne sais pas par où commencer ?
 </ul>
 <ul class="flex space-x-4 items-baseline">
 <li>
-<i class="fas fa-user-alt color-red text-2xl"></i></li>
+<i class="fas fa-user-alt color-red text-2xl mb-5"></i></li>
 <li>
 <p class=" text-lg  "> Jérémy Scala</p></li>
 </ul>
@@ -175,30 +188,42 @@ Après cette journée, tu seras capable de continuer par toi-même le développe
 <li>
  - Avoir son ordinateur</li>
  </ul>
- <div class="flex space-x-4">
-</div></div>
+</div>
+<div class="flex md:hidden flex-col">
+<button class="bg-red  m-auto text-white hover:text-yellow-400 md:p-5 p-2 text-sm md:text-3xl font-black w-full mt-5">En savoir plus</button>
+<button class="bg-red  m-auto text-white hover:text-yellow-400 md:p-5 p-2 text-sm md:text-3xl w-full font-black  mt-5">S'inscrire</button>
+</div>
 </section>
-<div>
+<div class="order-1 md:order-2">
 <figure class="">
 
 <img class="w-full" src="../assets/chriss.png">
 </figure>
 <div class="flex flex-col ">
-<button class="bg-red  m-auto text-white hover:text-yellow-400 p-5 text-3xl font-black w-full  mt-5">En savoir plus</button>
-<button class="bg-red  m-auto text-white hover:text-yellow-400 p-5 text-3xl w-full font-black  mt-5">S'inscrire</button>
+<button class="bg-red  m-auto text-white hover:text-yellow-400 hidden md:block p-5 text-3xl font-black w-full  mt-5">En savoir plus</button>
+<button class="bg-red  m-auto text-white hover:text-yellow-400 hidden md:block p-5 text-3xl w-full font-black  mt-5">S'inscrire</button>
 </div>      
 </div>
 </div>
 </article>
 
-      <footer class="flex w-10/12 m-auto p-2 opacity-8 justify-between "> 
+      <footer class="flex flex-col md:flex-row w-10/12 m-auto md:p-2  md:justify-between "> 
       <ul class="flex space-x-4 text-white " >
       <li> <i class="fab fa-facebook text-white text-xl"></i></li>
       <li> <i class="fab fa-instagram text-white text-xl"></i></li>
       </ul>
       <p class="text-white">@Sirius coop</p>
       <div>
-      <h3 class="text-white"> Newsletter  </h3>
+      <h3 class="text-white text-xl font-black mb-5"> Restez informé(e) !  </h3>
+      <form>
+      <div class="flex flex-col items-baseline"> 
+      <label class="text-yellow-400 font-black">Adresse mail</label>
+      <div class="flex flex-col md:flex-row "> 
+      <input type="email" />
+      <input type="submit" value="Envoyer" class="bg-white"> 
+      </div>
+      </div>
+      </form>
       </div>
       </footer>  
 
