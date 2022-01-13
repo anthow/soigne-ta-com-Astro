@@ -1,0 +1,31 @@
+---
+import Layout from '../../components/Base_Layout.astro'
+import moment from 'moment';
+const response = await fetch('http://localhost:1337/api/formations/');
+const content = await response.json();
+
+---
+    <Layout>
+    <article class="mt-10 content-center md:mt-0 w-10/12 flex flex-col md:grid md:grid-cols-2 m-auto md:space-x-1 md:h-screen md:py-2">
+<figure class="">
+<img class="" src="../assets/pipou.png">
+</figure>
+<section class="place-self-center ">  
+{content.data.map(item => (
+    <h1 class="text-yellow-400 text-4xl mb-5  md:text-5xl font-black">{item.attributes.intitule}</h1>
+    <div class="bg-white p-10">      
+    <p class="mb-5 text-yellow-400 text-lg font-black">du {item.attributes.date_debut}
+    
+     au  {item.attributes.date_fin} </p>
+      <p>{item.attributes.Description}</p>
+      </div>
+
+
+  ))}
+  </section>
+</article>
+
+
+</Layout>
+<script>
+moment({item.attributes.date_debut}).format('MMMM Do YYYY, h:mm:ss a');</script>

@@ -1,0 +1,14 @@
+---
+import Layout from '../../components/Base_Layout.astro'
+const response = await fetch('http://localhost:1337/api');
+const content = await response.json();
+console.log(content);
+
+---
+    <Layout>
+    <p>coucou</p>
+    <div>{JSON.stringify(content)}</div>
+
+
+
+</Layout>
